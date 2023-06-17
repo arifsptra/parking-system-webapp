@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parking System</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gray-100">
+    <h1 class="text-2xl font-bold text-center py-4 bg-gray-100 mb-8 shadow-sm">Parking System Universitas Dian Nuswantoro Semarang</h1>
+    <div class="flex justify-between w-full">
+      <div id="scan-plat" class="mx-auto">
+        <h2 class="text-xl font-bold text-center my-4">Scan Plat</h2>
+        <img src="{{ url_for('video_feed1') }}" width="640" height="480" class="rounded-lg" />
+        <div id="data-plat" class="text-xl text-center my-6 font-bold">
+          <p>K 1121 UG</p>
+        </div>
+      </div>
+      <div
+        id="sisa-tempat"
+        class="text-center mt-52 p-6 rounded-lg bg-green-400 h-32 hover:shadow-md transition ease-out duration-150"
+      >
+        <p>Sisa Tempat</p>
+        <strong class="text-6xl">15</strong>
+      </div>
+      <div id="scan-barcode" class="mx-auto">
+        <h2 class="text-xl font-bold text-center my-4">Scan Barcode</h2>
+        <img src="{{ url_for('video_feed2') }}" width="640" height="480" class="rounded-lg" />
+        <div id="data-barcode" class="text-xl text-center my-6 font-bold">
+          <p>A11.2021.13480 - Arif Saputra</p>
+        </div>
+      </div>
+    </div>
+    <div id="information" class="text-center mt-8">
+      <strong class="bg-yellow-400 text-2xl px-6 py-2 rounded-lg">Silahkan Scan!</strong>
+      <strong class="bg-green-400 text-2xl px-6 py-2 rounded-lg">Silahkan Masuk!</strong>
+      <strong class="bg-red-500 text-2xl px-6 py-2 rounded-lg">Maaf Data Tidak Valid!</strong>
+    </div>
+  </body>
+</html>
