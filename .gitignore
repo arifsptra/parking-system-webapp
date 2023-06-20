@@ -1,4 +1,5 @@
 Lib/
 Include/
-Script/
+Scripts/
+share/
 pyvenv.cfg
